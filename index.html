@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Assignment 35</title>
+</head>
+<body>
+    <div class="container">
+        <img src="./img/five.webp" class="slide" id="slide">
+        <img src="./img/back.png" class="action back" onclick="back()">
+        <img src="./img/next.png" class="action next" onclick="next()">
+    </div>
+    <script>
+        const img = [
+            "img/five.webp",
+            "img/one.jpg",
+            "img/two.jpg",
+            "img/three.jpg",
+            "img/four.webp",
+            "img/six.jpg",
+            "img/seven.jpg"
+        ];
+        let index = 0;
+        const slide = document.getElementById('slide');
+        function next() {
+            if (index < img.length - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            slide.src = img[index]
+        }
+        function back() {
+            if (index > 0) {
+                index--;
+            } else {
+                index = img.length - 1;
+            }
+            slide.src = img[index]
+        }
+        setInterval(next, 2000) 
+    </script>
+</body>
+</html>

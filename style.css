@@ -1,0 +1,33 @@
+.slide {
+    height: 550px;
+    width: 1100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container {
+    margin: 50px auto;
+    width: fit-content;
+    position: relative;
+}
+.action {
+    position: absolute;
+    height: 40px;
+    top: 45%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.back {
+    left: 0;   
+}
+.back:hover {
+    transform: scale(0.8) translateX(-10px);
+}
+
+.next {
+    right: 0;
+}
+
+.next:hover {
+    transform: scale(0.8) translateX(10px);
+}
